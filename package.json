@@ -4,17 +4,14 @@
   "description": "barebones directory to reproduct error with clonedeep + --optimize-minimize + source-map in webpack 3",
   "main": "index.js",
   "scripts": {
-    "start": "http-server & npm run watch",
-    "test1": "http-server & webpack --watch --config webpack.config.js",
-    "test2": "http-server & webpack --watch --config webpack.config2.js",
-    "test3": "http-server & webpack --watch --optimize-minimize --config webpack.config2.js",
-    "test4": "http-server & webpack --watch -p --config webpack.config3.js",
-    "test5": "http-server & webpack --watch -p --config webpack.config4.js",
-    "test6": "http-server & webpack --watch -p --config webpack.config5.js",
-    "test-deep-copy": "http-server & webpack --watch -p --config webpack.deep-copy.js",
-    "watch": "webpack --watch --config webpack.config.js",
-    "build": "webpack -p --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run test-default",
+    "test-default": "http-server & webpack --watch -p --config webpack.config.js",
+    "test-not-prod": "http-server & webpack --watch --config webpack.config.js",
+    "test-no-devtool": "http-server & webpack --watch -p --config webpack.no-devtool.js",
+    "test-clone-deep": "http-server & webpack --watch -p --config webpack.clone-deep.js",
+    "test-immutable": "http-server & webpack --watch -p --config webpack.immutable.js",
+    "test-deepcopy": "http-server & webpack --watch -p --config webpack.deepcopy.js",
+    "test-deep-copy": "http-server & webpack --watch -p --config webpack.deep-copy.js"
   },
   "author": "Hani Lim",
   "dependencies": {
@@ -28,6 +25,7 @@
     "immutable": "^3.8.2",
     "lodash.clonedeep": "^4.5.0",
     "uglifyjs-webpack-plugin": "^1.3.0",
-    "webpack": "^3.12.0"
+    "webpack": "^3.12.0",
+    "webpack-merge": "^4.1.4"
   }
 }

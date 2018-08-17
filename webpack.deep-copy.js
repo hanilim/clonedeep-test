@@ -1,37 +1,6 @@
-const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const path = require('path');
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
 
-module.exports = {
-  entry: './deep-copy.js',
-  devtool: 'source-map',
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, './')
-  },
-  module : {
-    rules : [
-      { test : /\.js$/,
-        exclude: /node_modules/,
-        loader:'babel-loader'
-      },
-    ],
-  },
-  plugins: [
-    new UglifyJsPlugin({
-  		sourceMap: true,
-  		parallel: true,
-  		uglifyOptions: {
-  			warnings : false
-  		}
-    }),
-    new webpack.DefinePlugin({
-  		'process.env' : {
-  			NODE_ENV : JSON.stringify('production')
-  		}
-  	})
-  ],
-  resolve: {
-    modules: ['node_modules']
-  }
-};
+module.exports = merge(common, {
+  entry: './deep-copy.js'
+});

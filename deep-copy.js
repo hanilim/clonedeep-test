@@ -1,6 +1,5 @@
 /*
-Debugging error of clonedeep + --optimize-minimize + source-map in Webpack 3
-
+WORKS!
 */
 import deepcopy from 'deep-copy';
 
