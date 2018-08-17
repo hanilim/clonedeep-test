@@ -10,6 +10,8 @@
     "test3": "http-server & webpack --watch --optimize-minimize --config webpack.config2.js",
     "test4": "http-server & webpack --watch -p --config webpack.config3.js",
     "test5": "http-server & webpack --watch -p --config webpack.config4.js",
+    "test6": "http-server & webpack --watch -p --config webpack.config5.js",
+    "test-deep-copy": "http-server & webpack --watch -p --config webpack.deep-copy.js",
     "watch": "webpack --watch --config webpack.config.js",
     "build": "webpack -p --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +22,8 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "clone-deep": "^4.0.0",
+    "deep-copy": "^1.4.2",
+    "deepcopy": "^1.0.0",
     "http-server": "^0.11.1",
     "immutable": "^3.8.2",
     "lodash.clonedeep": "^4.5.0",

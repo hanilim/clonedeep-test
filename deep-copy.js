@@ -1,12 +1,14 @@
 /*
 Debugging error of clonedeep + --optimize-minimize + source-map in Webpack 3
-clonedeep doesnt work bc uglifyJS has issues with es6
+
 */
-import clonedeep from 'clone-deep';
+import deepcopy from 'deep-copy';
 
 const obj = {
   foo: 'bar'
 };
 
-const obj2 = clonedeep(obj);
+const obj2 = deepcopy(obj);
+obj2.foo = 'baz';
+
 console.log(obj2);
