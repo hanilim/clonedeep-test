@@ -36,4 +36,4 @@ ___
 - It's difficult to tell the issue because it requires 3 separate things (`lodash.clonedeep`, `Webpack 3`, and `uglifyJS via -p` with `source-map`). Also, Webpack 3 documentation has been removed from the internet.
 - `clone-deep`, `deepcopy` packages throw errors during build process
 - `immutable` works but it's too much weight and work
-- `deepcopy` seems to work
+- `deep-copy` seems to work
